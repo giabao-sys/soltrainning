@@ -2,8 +2,9 @@ pragma solidity 0.8.4;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SimpleERC20 is IERC20 {
+contract SimpleERC20 is IERC20, Ownable {
     using SafeMath for uint256;
 
     string public symbol;
@@ -27,8 +28,7 @@ contract SimpleERC20 is IERC20 {
         minter = msg.sender;
     }
 
-    function setMinter(address _minter) external returns (bool) {
-        require(minter == msg.sender);
+    function setMinter(address _minter) onlyOwner external returns (bool) {
         minter = _minter;
         return true;
     }

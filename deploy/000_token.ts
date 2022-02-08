@@ -12,14 +12,14 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   await deploy('SimpleERC20', {
     from: deployer,
     log: true,
-    args: ["SERC20","SimpleERC20",parseUnits('1000', 18)],
+    args: ["SERC20","SimpleERC20",parseUnits('1000', 12)],
   });
 };
 
 export default func;
 
 func.skip = async ({network}) => {
-  return network.name != 'localhost';
+  return network.name != 'kovan';
 };
 
 func.tags = ['token'];
