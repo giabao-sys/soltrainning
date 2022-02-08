@@ -9,7 +9,7 @@ contract SimpleERC20 is IERC20 {
     string public symbol;
     string public  name;
 
-    uint256 public constant decimals = 18;
+    uint256 public constant decimals = 12;
     uint256 public override totalSupply;
     uint256 public constant MAX_TOTAL_SUPPLY = 1000 * 10 ** uint256(decimals);
     address public minter;
@@ -92,5 +92,4 @@ contract SimpleERC20 is IERC20 {
         emit Transfer(address(0), _to, _value);
         return true;
     }
-
 }
