@@ -8,7 +8,6 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   console.log('> creator', deployer);
   console.log('> Deploy token and utils');
   console.log('> Network name:' + network.name);
-
   await deploy('SimpleERC20', {
     from: deployer,
     log: true,

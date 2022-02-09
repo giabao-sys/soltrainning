@@ -18,17 +18,17 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
 
   await execute('SimpleERC20', {from: deployer, log: true}, 'setMinter', masterChef.address);
 
-  const serc20Matic = '0xe21dcc0a302328593c0c8536f2a3edc060b04408'
-  const serc20USDC = '0xE7a7dFB89F84A0cf850BCd399D0Ec906Ab232E9d'
+  const serc20KovanEth = '0x2bd629B6108C815CDBb49894f4bDf2D023c44BA4'
+  //const serc20USDC = '0xE7a7dFB89F84A0cf850BCd399D0Ec906Ab232E9d'
 
-  await execute('MasterChef', {from: deployer, log: true}, 'add', 50000, serc20Matic);
-  await execute('MasterChef', {from: deployer, log: true}, 'add', 20000, serc20USDC);
+  await execute('MasterChef', {from: deployer, log: true}, 'add', 50000, serc20KovanEth,false);
+  //await execute('MasterChef', {from: deployer, log: true}, 'add', 20000, serc20USDC,false);
 };
 
 export default func;
 
 func.skip = async ({network}) => {
-  return network.name != 'localhost';
+  return network.name != 'kovan';
 };
 
 func.tags = ['farms'];
