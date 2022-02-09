@@ -18,7 +18,19 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 // Go to https://hardhat.org/config/ to learn more
 const SCAN_API_KEY = 'ERG12CDQJHIBAYJU5CSRDM8BINHZEKV4FI';
 export default {
-  solidity: "0.8.4",
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.4',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+    ],
+  },
   networks: {
     hardhat: {
       accounts: accounts('localhost'),
