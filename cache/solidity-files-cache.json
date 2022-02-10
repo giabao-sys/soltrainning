@@ -2,14 +2,14 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/ERC20/BaoPG/ERC20.sol": {
-      "lastModificationDate": 1644319261841,
+      "lastModificationDate": 1644481011004,
       "contentHash": "4e40d99e60eb7db4af41ad919af86c51",
       "sourceName": "contracts/ERC20/BaoPG/ERC20.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -55,7 +55,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -97,7 +97,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -139,7 +139,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -183,7 +183,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -218,14 +218,14 @@
       ]
     },
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/MasterChef/BaoPG/MasterChef.sol": {
-      "lastModificationDate": 1644391941966,
-      "contentHash": "e2b0a545d3b3385eeeb22bca0b8f725e",
+      "lastModificationDate": 1644482381644,
+      "contentHash": "7af59fc64ce7f22ac201e78a9789580f",
       "sourceName": "contracts/MasterChef/BaoPG/MasterChef.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -277,7 +277,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -321,7 +321,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -367,7 +367,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -412,7 +412,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -454,7 +454,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -496,7 +496,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -540,7 +540,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -574,55 +574,6 @@
         "Address"
       ]
     },
-    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/Vault.sol": {
-      "lastModificationDate": 1644389344641,
-      "contentHash": "8641baae22563a0391dd2f62f5de2d3c",
-      "sourceName": "contracts/Vault/BaoPG/Vault.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./IStrategy.sol"
-      ],
-      "versionPragmas": [
-        "0.8.4"
-      ],
-      "artifacts": [
-        "Vault"
-      ]
-    },
     "/home/baopham/projects/soltrain/src/soltrainning/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
       "lastModificationDate": 1644208949148,
       "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
@@ -631,7 +582,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -665,15 +616,190 @@
         "ReentrancyGuard"
       ]
     },
-    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/IStrategy.sol": {
-      "lastModificationDate": 1644389369690,
-      "contentHash": "67ca80d3be20e34bd53be5b6ef2f4fdc",
-      "sourceName": "contracts/Vault/BaoPG/IStrategy.sol",
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/VaultBase.sol": {
+      "lastModificationDate": 1644480167975,
+      "contentHash": "609cb9c6b1653c0b9dcc85b6c0bb8ee4",
+      "sourceName": "contracts/Vault/BaoPG/VaultBase.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "./interfaces/IVault.sol",
+        "./interfaces/IUniswapV2Router.sol",
+        "./interfaces/IRouter.sol",
+        "./interfaces/IWETH.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "VaultBase"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IVault.sol": {
+      "lastModificationDate": 1644480033446,
+      "contentHash": "102cbf5699982a59a61e8016ca528cda",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IVault.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IVault"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IUniswapV2Router.sol": {
+      "lastModificationDate": 1644476871169,
+      "contentHash": "c8f0588e852a9a47740d62ff6c038021",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IUniswapV2Router.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IUniswapV2Router"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IRouter.sol": {
+      "lastModificationDate": 1644477520525,
+      "contentHash": "9e50b0df9ab5ca6b8d1d1285bc377139",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IRouter.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IRouter"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IWETH.sol": {
+      "lastModificationDate": 1644477743202,
+      "contentHash": "6bf704953e9586f2edefa8b1f873872c",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IWETH.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
@@ -706,7 +832,230 @@
         "0.8.4"
       ],
       "artifacts": [
-        "IStrategy"
+        "IWETH"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/VaultLP.sol": {
+      "lastModificationDate": 1644482072643,
+      "contentHash": "deedec2a56024a34ea3cecf503f27c01",
+      "sourceName": "contracts/Vault/BaoPG/VaultLP.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/security/Pausable.sol",
+        "./interfaces/IUniswapV2Pair.sol",
+        "./interfaces/IRouter.sol",
+        "./VaultBase.sol",
+        "./interfaces/IMasterChef.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "VaultIronLP"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/node_modules/@openzeppelin/contracts/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1644208949140,
+      "contentHash": "84a9b0b71e63a3fd568c61e210b77064",
+      "sourceName": "@openzeppelin/contracts/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
+      "lastModificationDate": 1644208949144,
+      "contentHash": "9c2dccab8e3a43a18c41e358763fe4d8",
+      "sourceName": "@openzeppelin/contracts/security/Pausable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Pausable"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IUniswapV2Pair.sol": {
+      "lastModificationDate": 1644481853127,
+      "contentHash": "bf117bb1a1e41bf51cd6265688db7902",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IUniswapV2Pair.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IUniswapV2Pair"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IMasterChef.sol": {
+      "lastModificationDate": 1644481703696,
+      "contentHash": "f9f74f51fa8f3188daec3831bab82cf5",
+      "sourceName": "contracts/Vault/BaoPG/interfaces/IMasterChef.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IMasterChef"
       ]
     }
   }

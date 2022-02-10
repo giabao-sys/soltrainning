@@ -1,8 +1,12 @@
 import { task } from "hardhat/config";
+import 'dotenv/config';
 import "@nomiclabs/hardhat-waffle";
 import {node_url, accounts} from './utils/networks';
 import 'hardhat-deploy';
 import 'hardhat-deploy-ethers';
+import 'hardhat-gas-reporter';
+import '@openzeppelin/hardhat-upgrades';
+import '@nomiclabs/hardhat-etherscan';
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -29,6 +33,33 @@ export default {
           },
         },
       },
+      // {
+      //   version: '0.8.0',
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 200,
+      //     },
+      //   },
+      // },
+      // {
+      //   version: '0.6.12',
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 200,
+      //     },
+      //   },
+      // },
+      // {
+      //   version: '0.6.0',
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 200,
+      //     },
+      //   },
+      // },
     ],
   },
   networks: {

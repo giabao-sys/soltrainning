@@ -99,6 +99,10 @@ contract MasterChef is Ownable {
         startBlock = _startBlock;
     }
 
+    function rewardToken() external view returns (address){
+        return address(sushi);
+    }
+
     function poolLength() external view returns (uint256) {
         return poolInfo.length;
     }
@@ -159,7 +163,7 @@ contract MasterChef is Ownable {
     }
 
     // View function to see pending SUSHIs on frontend.
-    function pendingSushi(uint256 _pid, address _user)
+    function pendingReward(uint256 _pid, address _user)
         external
         view
         returns (uint256)

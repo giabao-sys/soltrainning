@@ -1,0 +1,2379 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "Initializable": {
+        "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:35",
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:39"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:44"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "src": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "43c69fd1204909695f73be1f51f61931c927772b5c86d9e449d3250d0bc67c6e",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "src": "@openzeppelin/contracts/security/Pausable.sol:17",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "paused()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:33"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:28"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ReentrancyGuard": {
+        "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:22",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ReentrancyGuard",
+            "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:39"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ReentrancyGuard",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:37"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35",
+        "version": {
+          "withMetadata": "f8e1bed8003ada20e9213743af745475cad28a49f01ada11f1ae5b065f7eac61",
+          "withoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f",
+          "linkedWithoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f"
+        },
+        "inherit": [
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:54"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:38"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:42"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:43"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20Metadata": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:13",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:18",
+        "version": {
+          "withMetadata": "f8a437e1e23a1837d0cd4ec9bba02d01e53172cfb1cd3972ffe4803fba07a368",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "314bfe57e60a556a9fe3c762c2383ebae5359951101dc0f600883ff84347087b",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:186"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "4c5b194d2ca4217523db87c516ec708be24610eeea9872d511b5453ba7e497b5",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableSet": {
+        "src": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol:30",
+        "version": {
+          "withMetadata": "d35befd15f65bad7c22523230d83e4f82b396eb938980b9bed9f6699373e2b46",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SimpleERC20": {
+        "src": "contracts/ERC20/BaoPG/ERC20.sol:7",
+        "version": {
+          "withMetadata": "756510179a4f009370448573d2d1069953d5ad37d45b72f24a8313b62c771160",
+          "withoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9",
+          "linkedWithoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9"
+        },
+        "inherit": [
+          "Ownable",
+          "Context",
+          "IERC20"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "(string,string,uint256)",
+          "setMinter(address)",
+          "approve(address,uint256)",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "SimpleERC20",
+            "src": "contracts/ERC20/BaoPG/ERC20.sol:21"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SimpleERC20",
+              "label": "symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:10"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:11"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:14"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "minter",
+              "type": "t_address",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:16"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:18"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "allowance",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:19"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IMigratorChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:12",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "migrate(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "MasterChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:32",
+        "version": {
+          "withMetadata": "1323fac2d943cb048093a9301562cecf58c6012c30aa36169de4f221b48595fc",
+          "withoutMetadata": "1b8b57712d277ccd587882f5a4c493c923ad7453e1484f95e9f3caa30d8640ed",
+          "linkedWithoutMetadata": "1b8b57712d277ccd587882f5a4c493c923ad7453e1484f95e9f3caa30d8640ed"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "SafeERC20"
+        ],
+        "methods": [
+          "(address,address,uint256,uint256,uint256)",
+          "rewardToken()",
+          "poolLength()",
+          "add(uint256,address,bool)",
+          "set(uint256,uint256,bool)",
+          "setMigrator(address)",
+          "migrate(uint256)",
+          "pendingReward(uint256,address)",
+          "massUpdatePools()",
+          "updatePool(uint256)",
+          "deposit(uint256,uint256)",
+          "withdraw(uint256,uint256)",
+          "emergencyWithdraw(uint256)",
+          "dev(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MasterChef",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:88"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "totalAllocPoint",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MasterChef",
+              "label": "sushi",
+              "type": "t_contract(SimpleERC20)3063",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:61"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "devaddr",
+              "type": "t_address",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:63"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "bonusEndBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:65"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "sushiPerDay",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:67"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "migrator",
+              "type": "t_contract(IMigratorChef)3083",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:71"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "poolInfo",
+              "type": "t_array(t_struct(PoolInfo)3107_storage)dyn_storage",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:73"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "userInfo",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)3097_storage))",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:75"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "totalAllocPoint",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "startBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:79"
+            }
+          ],
+          "types": {
+            "t_contract(SimpleERC20)3063": {
+              "label": "contract SimpleERC20"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_contract(IMigratorChef)3083": {
+              "label": "contract IMigratorChef"
+            },
+            "t_array(t_struct(PoolInfo)3107_storage)dyn_storage": {
+              "label": "struct MasterChef.PoolInfo[]"
+            },
+            "t_struct(PoolInfo)3107_storage": {
+              "label": "struct MasterChef.PoolInfo",
+              "members": [
+                {
+                  "label": "lpToken",
+                  "type": "t_contract(IERC20)1253"
+                },
+                {
+                  "label": "allocPoint",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "lastRewardTime",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "accSushiPerShare",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_contract(IERC20)1253": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)3097_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct MasterChef.UserInfo))"
+            },
+            "t_mapping(t_address,t_struct(UserInfo)3097_storage)": {
+              "label": "mapping(address => struct MasterChef.UserInfo)"
+            },
+            "t_struct(UserInfo)3097_storage": {
+              "label": "struct MasterChef.UserInfo",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "rewardDebt",
+                  "type": "t_uint256"
+                }
+              ]
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "VaultBase": {
+        "src": "contracts/Vault/BaoPG/VaultBase.sol:14",
+        "inherit": [
+          "ReentrancyGuard",
+          "IVault"
+        ],
+        "libraries": [
+          "SafeERC20"
+        ],
+        "methods": [
+          "initialize(address,address)",
+          "canAbandon()",
+          "info()",
+          "getRouter()",
+          "updateSlippage(uint256)",
+          "setHarvestor(address)",
+          "abandon()",
+          "claimRewards()",
+          "rescueFund(address,uint256)",
+          "executeTransaction(address,uint256,string,bytes)",
+          "()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "slippage",
+            "src": "contracts/Vault/BaoPG/VaultBase.sol:35"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "VaultBase",
+              "label": "initialized",
+              "type": "t_bool",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:26"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "swapRouter",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:29"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "owner",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:30"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "harvestor",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:31"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "lastEarnBlock",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:32"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "wantAddress",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:33"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "abandoned",
+              "type": "t_bool",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:34"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "slippage",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:35"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "VaultIronLP": {
+        "src": "contracts/Vault/BaoPG/VaultLP.sol:15",
+        "version": {
+          "withMetadata": "314e8b349c8192f9ad55715a610e894641fcb7d6262245120ba5a03af7cf143a",
+          "withoutMetadata": "9c6b9a69bae9dcc648a00534a41125b0d0fa575fb9f1c7fed0d0bb6abff08694",
+          "linkedWithoutMetadata": "9c6b9a69bae9dcc648a00534a41125b0d0fa575fb9f1c7fed0d0bb6abff08694"
+        },
+        "inherit": [
+          "VaultBase",
+          "ReentrancyGuard",
+          "IVault"
+        ],
+        "libraries": [
+          "SafeERC20"
+        ],
+        "methods": [
+          "(address,address,uint256)",
+          "balanceInFarm()",
+          "pending()",
+          "canAbandon()",
+          "info()",
+          "compound()",
+          "deposit(uint256)",
+          "withdrawAll()",
+          "withdraw(uint256)",
+          "claimRewards()",
+          "abandon()",
+          "syncSwapRoutes()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "VaultIronLP",
+            "src": "contracts/Vault/BaoPG/VaultLP.sol:30"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "VaultIronLP",
+              "label": "masterChef",
+              "type": "t_contract(IMasterChef)5459",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:18"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "token0",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:19"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "token1",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:20"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "rewardToken",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:21"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "poolId",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:22"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "liquidityRouter",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:23"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "routes",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_struct(RouteInfo)3988_storage))",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:25"
+            },
+            {
+              "contract": "VaultIronLP",
+              "label": "swapTimeout",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultLP.sol:27"
+            }
+          ],
+          "types": {
+            "t_contract(IMasterChef)5459": {
+              "label": "contract IMasterChef"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_struct(RouteInfo)3988_storage))": {
+              "label": "mapping(address => mapping(address => struct VaultBase.RouteInfo))"
+            },
+            "t_mapping(t_address,t_struct(RouteInfo)3988_storage)": {
+              "label": "mapping(address => struct VaultBase.RouteInfo)"
+            },
+            "t_struct(RouteInfo)3988_storage": {
+              "label": "struct VaultBase.RouteInfo",
+              "members": [
+                {
+                  "label": "router",
+                  "type": "t_address"
+                },
+                {
+                  "label": "path",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IMasterChef": {
+        "src": "contracts/Vault/BaoPG/interfaces/IMasterChef.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "poolInfo(uint256)",
+          "userInfo(uint256,address)",
+          "pendingReward(uint256,address)",
+          "deposit(uint256,uint256)",
+          "withdraw(uint256,uint256)",
+          "rewardToken()",
+          "add(uint256,address,bool)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRouter": {
+        "src": "contracts/Vault/BaoPG/interfaces/IRouter.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "getSwapRoute(address,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IUniswapV2Pair": {
+        "src": "contracts/Vault/BaoPG/interfaces/IUniswapV2Pair.sol:4",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "token0()",
+          "token1()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IUniswapV2Router": {
+        "src": "contracts/Vault/BaoPG/interfaces/IUniswapV2Router.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WBNB()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityBNB(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityBNB(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityBNBWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityBNBSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityBNBWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactBNBForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForBNBSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactBNBForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactBNB(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForBNB(uint256,uint256,address[],address,uint256)",
+          "swapBNBForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IVault": {
+        "src": "contracts/Vault/BaoPG/interfaces/IVault.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "wantAddress()",
+          "balanceInFarm()",
+          "pending()",
+          "abandoned()",
+          "initialize(address,address)",
+          "compound()",
+          "abandon()",
+          "claimRewards()",
+          "deposit(uint256)",
+          "withdraw(uint256)",
+          "withdrawAll()",
+          "updateSlippage(uint256)",
+          "rescueFund(address,uint256)",
+          "canAbandon()",
+          "info()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IWETH": {
+        "src": "contracts/Vault/BaoPG/interfaces/IWETH.sol:7",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "deposit()",
+          "withdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Initializable": {
+        "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:35",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "src": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "43c69fd1204909695f73be1f51f61931c927772b5c86d9e449d3250d0bc67c6e",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ReentrancyGuard": {
+        "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:22",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ReentrancyGuard",
+            "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:39"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ReentrancyGuard",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/security/ReentrancyGuard.sol:37"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35",
+        "version": {
+          "withMetadata": "f8e1bed8003ada20e9213743af745475cad28a49f01ada11f1ae5b065f7eac61",
+          "withoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f",
+          "linkedWithoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f"
+        },
+        "inherit": [
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:54"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:38"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:42"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:43"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20Metadata": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:13",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:18",
+        "version": {
+          "withMetadata": "f8a437e1e23a1837d0cd4ec9bba02d01e53172cfb1cd3972ffe4803fba07a368",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "314bfe57e60a556a9fe3c762c2383ebae5359951101dc0f600883ff84347087b",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:186"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "4c5b194d2ca4217523db87c516ec708be24610eeea9872d511b5453ba7e497b5",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableSet": {
+        "src": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol:30",
+        "version": {
+          "withMetadata": "d35befd15f65bad7c22523230d83e4f82b396eb938980b9bed9f6699373e2b46",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SimpleERC20": {
+        "src": "contracts/ERC20/BaoPG/ERC20.sol:7",
+        "version": {
+          "withMetadata": "756510179a4f009370448573d2d1069953d5ad37d45b72f24a8313b62c771160",
+          "withoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9",
+          "linkedWithoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9"
+        },
+        "inherit": [
+          "Ownable",
+          "Context",
+          "IERC20"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "(string,string,uint256)",
+          "setMinter(address)",
+          "approve(address,uint256)",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "SimpleERC20",
+            "src": "contracts/ERC20/BaoPG/ERC20.sol:21"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SimpleERC20",
+              "label": "symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:10"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:11"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:14"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "minter",
+              "type": "t_address",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:16"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:18"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "allowance",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:19"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IMigratorChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:12",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "migrate(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "MasterChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:32",
+        "version": {
+          "withMetadata": "789080525187a3e480569c28faeceb22f2aefd06550f9bfd80c853957c417570",
+          "withoutMetadata": "03a9a36b031382c008df81c8047618bc49511afaf8aa064896656fa9ec574b82",
+          "linkedWithoutMetadata": "03a9a36b031382c008df81c8047618bc49511afaf8aa064896656fa9ec574b82"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "SafeERC20"
+        ],
+        "methods": [
+          "(address,address,uint256,uint256,uint256)",
+          "poolLength()",
+          "add(uint256,address,bool)",
+          "set(uint256,uint256,bool)",
+          "setMigrator(address)",
+          "migrate(uint256)",
+          "pendingSushi(uint256,address)",
+          "massUpdatePools()",
+          "updatePool(uint256)",
+          "deposit(uint256,uint256)",
+          "withdraw(uint256,uint256)",
+          "emergencyWithdraw(uint256)",
+          "dev(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MasterChef",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:88"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "totalAllocPoint",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MasterChef",
+              "label": "sushi",
+              "type": "t_contract(SimpleERC20)2897",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:61"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "devaddr",
+              "type": "t_address",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:63"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "bonusEndBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:65"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "sushiPerDay",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:67"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "migrator",
+              "type": "t_contract(IMigratorChef)2917",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:71"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "poolInfo",
+              "type": "t_array(t_struct(PoolInfo)2941_storage)dyn_storage",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:73"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "userInfo",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)2931_storage))",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:75"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "totalAllocPoint",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "startBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:79"
+            }
+          ],
+          "types": {
+            "t_contract(SimpleERC20)2897": {
+              "label": "contract SimpleERC20"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_contract(IMigratorChef)2917": {
+              "label": "contract IMigratorChef"
+            },
+            "t_array(t_struct(PoolInfo)2941_storage)dyn_storage": {
+              "label": "struct MasterChef.PoolInfo[]"
+            },
+            "t_struct(PoolInfo)2941_storage": {
+              "label": "struct MasterChef.PoolInfo",
+              "members": [
+                {
+                  "label": "lpToken",
+                  "type": "t_contract(IERC20)1087"
+                },
+                {
+                  "label": "allocPoint",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "lastRewardTime",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "accSushiPerShare",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_contract(IERC20)1087": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)2931_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct MasterChef.UserInfo))"
+            },
+            "t_mapping(t_address,t_struct(UserInfo)2931_storage)": {
+              "label": "mapping(address => struct MasterChef.UserInfo)"
+            },
+            "t_struct(UserInfo)2931_storage": {
+              "label": "struct MasterChef.UserInfo",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "rewardDebt",
+                  "type": "t_uint256"
+                }
+              ]
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "VaultBase": {
+        "src": "contracts/Vault/BaoPG/VaultBase.sol:14",
+        "inherit": [
+          "ReentrancyGuard",
+          "IVault"
+        ],
+        "libraries": [
+          "SafeERC20"
+        ],
+        "methods": [
+          "initialize(address,address)",
+          "canAbandon()",
+          "info()",
+          "getRouter()",
+          "updateSlippage(uint256)",
+          "setHarvestor(address)",
+          "abandon()",
+          "claimRewards()",
+          "rescueFund(address,uint256)",
+          "executeTransaction(address,uint256,string,bytes)",
+          "()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "slippage",
+            "src": "contracts/Vault/BaoPG/VaultBase.sol:35"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "VaultBase",
+              "label": "initialized",
+              "type": "t_bool",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:26"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "swapRouter",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:29"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "owner",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:30"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "harvestor",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:31"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "lastEarnBlock",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:32"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "wantAddress",
+              "type": "t_address",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:33"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "abandoned",
+              "type": "t_bool",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:34"
+            },
+            {
+              "contract": "VaultBase",
+              "label": "slippage",
+              "type": "t_uint256",
+              "src": "contracts/Vault/BaoPG/VaultBase.sol:35"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRouter": {
+        "src": "contracts/Vault/BaoPG/interfaces/IRouter.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "getSwapRoute(address,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IUniswapV2Router": {
+        "src": "contracts/Vault/BaoPG/interfaces/IUniswapV2Router.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WBNB()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityBNB(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityBNB(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityBNBWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityBNBSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityBNBWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactBNBForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForBNBSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactBNBForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactBNB(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForBNB(uint256,uint256,address[],address,uint256)",
+          "swapBNBForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IVault": {
+        "src": "contracts/Vault/BaoPG/interfaces/IVault.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "wantAddress()",
+          "balanceInFarm()",
+          "pending()",
+          "abandoned()",
+          "initialize(address,address)",
+          "compound()",
+          "abandon()",
+          "claimRewards()",
+          "deposit(uint256)",
+          "withdraw(uint256)",
+          "withdrawAll()",
+          "updateSlippage(uint256)",
+          "rescueFund(address,uint256)",
+          "canAbandon()",
+          "info()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IWETH": {
+        "src": "contracts/Vault/BaoPG/interfaces/IWETH.sol:7",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "deposit()",
+          "withdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Initializable": {
+        "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:35",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "src": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "43c69fd1204909695f73be1f51f61931c927772b5c86d9e449d3250d0bc67c6e",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35",
+        "version": {
+          "withMetadata": "f8e1bed8003ada20e9213743af745475cad28a49f01ada11f1ae5b065f7eac61",
+          "withoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f",
+          "linkedWithoutMetadata": "696e14ba4ca5b6d5de30fa82bca8d6facf31faef97b9ae52231b792e2fd3064f"
+        },
+        "inherit": [
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:54"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:38"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:42"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:43"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20Metadata": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:13",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:18",
+        "version": {
+          "withMetadata": "f8a437e1e23a1837d0cd4ec9bba02d01e53172cfb1cd3972ffe4803fba07a368",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "314bfe57e60a556a9fe3c762c2383ebae5359951101dc0f600883ff84347087b",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:186"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "4c5b194d2ca4217523db87c516ec708be24610eeea9872d511b5453ba7e497b5",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableSet": {
+        "src": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol:30",
+        "version": {
+          "withMetadata": "d35befd15f65bad7c22523230d83e4f82b396eb938980b9bed9f6699373e2b46",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SimpleERC20": {
+        "src": "contracts/ERC20/BaoPG/ERC20.sol:7",
+        "version": {
+          "withMetadata": "756510179a4f009370448573d2d1069953d5ad37d45b72f24a8313b62c771160",
+          "withoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9",
+          "linkedWithoutMetadata": "07197a7970fafffb7b12c872e14bcb02629aaea12d84fdde26c40dbdded772e9"
+        },
+        "inherit": [
+          "Ownable",
+          "Context",
+          "IERC20"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "methods": [
+          "(string,string,uint256)",
+          "setMinter(address)",
+          "approve(address,uint256)",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "mint(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "SimpleERC20",
+            "src": "contracts/ERC20/BaoPG/ERC20.sol:21"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SimpleERC20",
+              "label": "symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:10"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:11"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:14"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "minter",
+              "type": "t_address",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:16"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:18"
+            },
+            {
+              "contract": "SimpleERC20",
+              "label": "allowance",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20/BaoPG/ERC20.sol:19"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IMigratorChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:12",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "migrate(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "MasterChef": {
+        "src": "contracts/MasterChef/BaoPG/MasterChef.sol:32",
+        "version": {
+          "withMetadata": "789080525187a3e480569c28faeceb22f2aefd06550f9bfd80c853957c417570",
+          "withoutMetadata": "03a9a36b031382c008df81c8047618bc49511afaf8aa064896656fa9ec574b82",
+          "linkedWithoutMetadata": "03a9a36b031382c008df81c8047618bc49511afaf8aa064896656fa9ec574b82"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "SafeERC20"
+        ],
+        "methods": [
+          "(address,address,uint256,uint256,uint256)",
+          "poolLength()",
+          "add(uint256,address,bool)",
+          "set(uint256,uint256,bool)",
+          "setMigrator(address)",
+          "migrate(uint256)",
+          "pendingSushi(uint256,address)",
+          "massUpdatePools()",
+          "updatePool(uint256)",
+          "deposit(uint256,uint256)",
+          "withdraw(uint256,uint256)",
+          "emergencyWithdraw(uint256)",
+          "dev(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MasterChef",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:88"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "totalAllocPoint",
+            "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MasterChef",
+              "label": "sushi",
+              "type": "t_contract(SimpleERC20)2857",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:61"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "devaddr",
+              "type": "t_address",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:63"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "bonusEndBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:65"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "sushiPerDay",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:67"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "migrator",
+              "type": "t_contract(IMigratorChef)2877",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:71"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "poolInfo",
+              "type": "t_array(t_struct(PoolInfo)2901_storage)dyn_storage",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:73"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "userInfo",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)2891_storage))",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:75"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "totalAllocPoint",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:77"
+            },
+            {
+              "contract": "MasterChef",
+              "label": "startBlock",
+              "type": "t_uint256",
+              "src": "contracts/MasterChef/BaoPG/MasterChef.sol:79"
+            }
+          ],
+          "types": {
+            "t_contract(SimpleERC20)2857": {
+              "label": "contract SimpleERC20"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_contract(IMigratorChef)2877": {
+              "label": "contract IMigratorChef"
+            },
+            "t_array(t_struct(PoolInfo)2901_storage)dyn_storage": {
+              "label": "struct MasterChef.PoolInfo[]"
+            },
+            "t_struct(PoolInfo)2901_storage": {
+              "label": "struct MasterChef.PoolInfo",
+              "members": [
+                {
+                  "label": "lpToken",
+                  "type": "t_contract(IERC20)1047"
+                },
+                {
+                  "label": "allocPoint",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "lastRewardTime",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "accSushiPerShare",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_contract(IERC20)1047": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)2891_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct MasterChef.UserInfo))"
+            },
+            "t_mapping(t_address,t_struct(UserInfo)2891_storage)": {
+              "label": "mapping(address => struct MasterChef.UserInfo)"
+            },
+            "t_struct(UserInfo)2891_storage": {
+              "label": "struct MasterChef.UserInfo",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "rewardDebt",
+                  "type": "t_uint256"
+                }
+              ]
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    }
+  ]
+}
