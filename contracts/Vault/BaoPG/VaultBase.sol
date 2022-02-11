@@ -19,14 +19,14 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
     }
 
     uint256 internal constant RATIO_PRECISION = 1000000; // 6 decimals
-    address internal constant weth = 0xd0A1E359811322d97991E03f863a0C30C2cF029C; // weth
+    address internal constant weth = 0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619; // weth
 
     // =========== state variables ================================
 
     bool public initialized;
     //IVaultFactory public factory;
 
-    address public swapRouter;
+    address public router;
     address public override owner; // the only address can deposit, withdraw
     address public harvestor; // this address can call earn method
     uint256 public lastEarnBlock;
@@ -48,14 +48,13 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
         //factory = IVaultFactory(msg.sender);
     }
 
-    function initialize(address _owner, address _swapRouter) external virtual override {//, uint256 _vaultTemplateId) external virtual override {
+    function initialize(address _owner) external virtual override {//, uint256 _vaultTemplateId) external virtual override {
         require(!initialized, "already init");
         //require(msg.sender == address(factory), "!factory");
         harvestor = _owner;
         owner = _owner;
-        swapRouter = _swapRouter;
         //templateId = _vaultTemplateId;
-        _syncSwapRoutes();
+        //_syncSwapRoutes();
         initialized = true;
     }
 
@@ -83,7 +82,7 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
     // }
 
     function getRouter() public view virtual returns (IRouter) {
-        return IRouter(swapRouter);
+        return IRouter(router);
     }
 
     // =========== modifiers ===========================
@@ -165,7 +164,7 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
         return _token == weth;
     }
 
-    function _syncSwapRoutes() internal virtual;
+    // function _syncSwapRoutes() internal virtual;
 
     // =========== emergency functions =================
 

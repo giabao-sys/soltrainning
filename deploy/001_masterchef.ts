@@ -18,10 +18,11 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
 
   await execute('SimpleERC20', {from: deployer, log: true}, 'setMinter', masterChef.address);
 
-  const serc20KovanEth = '0x2bd629B6108C815CDBb49894f4bDf2D023c44BA4'
+  //const serc20KovanEth = '0x2bd629B6108C815CDBb49894f4bDf2D023c44BA4';
+  const serc20KovanWEth = '0x2bd629B6108C815CDBb49894f4bDf2D023c44BA4';
   //const serc20USDC = '0xE7a7dFB89F84A0cf850BCd399D0Ec906Ab232E9d'
 
-  await execute('MasterChef', {from: deployer, log: true}, 'add', 50000, serc20KovanEth,false);
+  await execute('MasterChef', {from: deployer, log: true}, 'add', 50000, serc20KovanWEth,false);
   //await execute('MasterChef', {from: deployer, log: true}, 'add', 20000, serc20USDC,false);
 };
 

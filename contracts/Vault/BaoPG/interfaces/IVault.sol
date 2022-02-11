@@ -13,7 +13,7 @@ interface IVault {
 
     function abandoned() external view returns (bool);
 
-    function initialize(address _owner, address _swapRouter) external;
+    function initialize(address _owner) external;
 
     function compound() external;
 
@@ -32,6 +32,12 @@ interface IVault {
     function rescueFund(address _token, uint256 _amount) external;
 
     function canAbandon() external returns (bool);
+    function addRoute(
+        address _from,
+        address _to,
+        address _router,
+        address[] calldata path
+    ) external;
 
     function info()
         external

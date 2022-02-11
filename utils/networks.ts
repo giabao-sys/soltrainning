@@ -11,7 +11,7 @@ export function getMnemonic(networkName?: string): string {
 
   const mnemonic = process.env.MNEMONIC;
   if (!mnemonic || mnemonic === '') {
-    return 'test test test test test test test test test test test junk';
+    return 'fresh gate damage foil runway motion cart option cute grace prison spawn';
   }
   return mnemonic;
 }

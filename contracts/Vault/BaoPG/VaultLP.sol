@@ -12,7 +12,7 @@ import "./interfaces/IRouter.sol";
 import "./VaultBase.sol";
 import "./interfaces/IMasterChef.sol";
 
-contract VaultIronLP is VaultBase {
+contract VaultLP is VaultBase {
     using SafeERC20 for IERC20;
 
     IMasterChef public masterChef;
@@ -39,7 +39,7 @@ contract VaultIronLP is VaultBase {
         rewardToken = _masterChef.rewardToken();
         token0 = IUniswapV2Pair(wantAddress).token0();
         token1 = IUniswapV2Pair(wantAddress).token1();
-        _syncSwapRoutes();
+        // _syncSwapRoutes();
     }
 
     // ========== views =================
@@ -82,6 +82,21 @@ contract VaultIronLP is VaultBase {
     }
 
     // ========== vault core functions ===========
+    function addRoute(
+        address _from,
+        address _to,
+        address _router,
+        address[] calldata path
+    ) override external onlyOwner {
+        require(_from != address(0), "Src token is invalid");
+        require(_to != address(0), "Dst token is invalid");
+        require(_from != _to, "Src token must be diff from Dst token");
+        require(_router != address(0), "Router is invalid");
+        require(path[0] == _from, "Route must start with src token");
+        require(path[path.length - 1] == _to, "Route must end with dst token");
+        RouteInfo memory _info = RouteInfo(_router, path);
+        routes[_from][_to] = _info;
+    }
 
     function compound() external override onlyHarvestor {
         // Harvest farm tokens
@@ -171,31 +186,31 @@ contract VaultIronLP is VaultBase {
         abandoned = true;
     }
 
-    function syncSwapRoutes() external onlyOwner {
-        _syncSwapRoutes();
-    }
+    // function syncSwapRoutes() external onlyOwner {
+    //     _syncSwapRoutes();
+    // }
 
     // ============= internal functions ================
 
-    function _syncSwapRoutes() internal override {
-        _addRouteInfo(rewardToken, token0);
-        _addRouteInfo(rewardToken, token1);
-        _addRouteInfo(token0, rewardToken);
-        _addRouteInfo(token1, rewardToken);
-    }
+    // function _syncSwapRoutes() internal override {
+    //     _addRouteInfo(rewardToken, token0);
+    //     _addRouteInfo(rewardToken, token1);
+    //     _addRouteInfo(token0, rewardToken);
+    //     _addRouteInfo(token1, rewardToken);
+    // }
 
-    function _addRouteInfo(address _from, address _to) internal {
-        if (_from != _to) {
-            IRouter router = getRouter();
-            (address _router, address[] memory _path) = router.getSwapRoute(_from, _to);
-            require(_from != address(0), "Src token is invalid");
-            require(_to != address(0), "Dst token is invalid");
-            require(_router != address(0), "Router is invalid");
-            require(_path[0] == _from, "Route must start with src token");
-            require(_path[_path.length - 1] == _to, "Route must end with dst token");
-            routes[_from][_to] = RouteInfo(_router, _path);
-        }
-    }
+    // //debugging
+    // function _addRouteInfo(address _from, address _to) internal {
+    //     if (_from != _to) {
+    //         (address _router, address[] memory _path) = IRouter(router).getSwapRoute(_from, _to);
+    //         require(_from != address(0), "Src token is invalid");
+    //         require(_to != address(0), "Dst token is invalid");
+    //         require(_router != address(0), "Router is invalid");
+    //         require(_path[0] == _from, "Route must start with src token");
+    //         require(_path[_path.length - 1] == _to, "Route must end with dst token");
+    //         routes[_from][_to] = RouteInfo(_router, _path);
+    //     }
+    // }
 
     function _getSwapRoute(address _fromToken, address _toToken) internal view returns (address _router, address[] memory _path) {
         RouteInfo storage _info = routes[_fromToken][_toToken];
