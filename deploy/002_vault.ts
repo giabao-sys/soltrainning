@@ -13,7 +13,9 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   const sushiSwapRouter = {address: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'};
 
   const masterChef = await get('MasterChef');
+  console.log('SimpleERC20:' + masterChef.address);
   console.log('masterchef:' + masterChef.address);
+  console.log('VaultLP:' + masterChef.address);
   // const router = await deploy('Router', {from: deployer, log: true});
 
   const vault = await deploy('VaultLP', {
@@ -50,15 +52,6 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
     sushiSwapRouter.address,
     [weth.address, simpleERC20.address]
   );
-
-  // return;
-  // await execute('SimpleERC20', {from: deployer, log: true}, 'setMinter', masterChef.address);
-
-  // const serc20KovanEth = '0x2bd629B6108C815CDBb49894f4bDf2D023c44BA4'
-  // //const serc20USDC = '0xE7a7dFB89F84A0cf850BCd399D0Ec906Ab232E9d'
-
-  // await execute('MasterChef', {from: deployer, log: true}, 'add', 50000, serc20KovanEth,false);
-  // //await execute('MasterChef', {from: deployer, log: true}, 'add', 20000, serc20USDC,false);
 };
 
 export default func;
