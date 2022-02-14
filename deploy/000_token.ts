@@ -11,7 +11,7 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   await deploy('SimpleERC20', {
     from: deployer,
     log: true,
-    args: ["SERC20","SimpleERC20",parseUnits('1000', 12)],
+    args: ["SRERC20","SimpleERC20",1000000000],
   });
 };
 

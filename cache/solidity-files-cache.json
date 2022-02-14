@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/ERC20/BaoPG/ERC20.sol": {
-      "lastModificationDate": 1644481011004,
-      "contentHash": "4e40d99e60eb7db4af41ad919af86c51",
+      "lastModificationDate": 1644577505263,
+      "contentHash": "813da3936bb8370ba41281c029272fab",
       "sourceName": "contracts/ERC20/BaoPG/ERC20.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -215,58 +215,6 @@
       ],
       "artifacts": [
         "Context"
-      ]
-    },
-    "/home/baopham/projects/soltrain/src/soltrainning/contracts/MasterChef/BaoPG/MasterChef.sol": {
-      "lastModificationDate": 1644493633174,
-      "contentHash": "7af59fc64ce7f22ac201e78a9789580f",
-      "sourceName": "contracts/MasterChef/BaoPG/MasterChef.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
-        "../../ERC20/BaoPG/ERC20.sol"
-      ],
-      "versionPragmas": [
-        "0.8.4"
-      ],
-      "artifacts": [
-        "IMigratorChef",
-        "MasterChef"
       ]
     },
     "/home/baopham/projects/soltrain/src/soltrainning/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
@@ -617,8 +565,8 @@
       ]
     },
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/VaultBase.sol": {
-      "lastModificationDate": 1644545621542,
-      "contentHash": "d39006b94dffee95b1fa921acaad3e7f",
+      "lastModificationDate": 1644812524057,
+      "contentHash": "d0aac9a050075f1ee5bae32cdfd0aada",
       "sourceName": "contracts/Vault/BaoPG/VaultBase.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -666,8 +614,8 @@
       ]
     },
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/interfaces/IVault.sol": {
-      "lastModificationDate": 1644544517114,
-      "contentHash": "313be156d85ed1686c032f78dce971b9",
+      "lastModificationDate": 1644573171981,
+      "contentHash": "551898d0f77a1cbcf17bcf66096147bb",
       "sourceName": "contracts/Vault/BaoPG/interfaces/IVault.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -836,7 +784,7 @@
       ]
     },
     "/home/baopham/projects/soltrain/src/soltrainning/contracts/Vault/BaoPG/VaultLP.sol": {
-      "lastModificationDate": 1644544682649,
+      "lastModificationDate": 1644820763037,
       "contentHash": "481e14bf6fdb867308e74174fbefeab4",
       "sourceName": "contracts/Vault/BaoPG/VaultLP.sol",
       "solcConfig": {
@@ -1056,6 +1004,155 @@
       ],
       "artifacts": [
         "IMasterChef"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/MasterChef/Tuan/MasterChef.sol": {
+      "lastModificationDate": 1644824107278,
+      "contentHash": "133d38463240855e1e54da85b773d0a8",
+      "sourceName": "contracts/MasterChef/Tuan/MasterChef.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+        "../../ERC20/BaoPG/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IMigratorChef",
+        "MasterChef"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/ERC20/Tuan/TATU.sol": {
+      "lastModificationDate": 1644811814503,
+      "contentHash": "e58aaf43cc055fe303f8686f98e50987",
+      "sourceName": "contracts/ERC20/Tuan/TATU.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TATU"
+      ]
+    },
+    "/home/baopham/projects/soltrain/src/soltrainning/contracts/MasterChef/BaoPG/MasterChefBaoPG.sol": {
+      "lastModificationDate": 1644820762821,
+      "contentHash": "8dbdb122158d7c88b8031fa3729b4ba8",
+      "sourceName": "contracts/MasterChef/BaoPG/MasterChefBaoPG.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+        "../../ERC20/BaoPG/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IMigratorChefBaoPG",
+        "MasterChefBaoPG"
       ]
     }
   }

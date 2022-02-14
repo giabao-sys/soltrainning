@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity 0.8.4;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -43,20 +45,18 @@ contract MasterChef is Ownable {
         //   pending reward = (user.amount * pool.accSushiPerShare) - user.rewardDebt
         //
         // Whenever a user deposits or withdraws LP tokens to a pool. Here's what happens:
-        //   1. The pool's `accSushiPerShare` (and `lastRewardTime`) gets updated.
+        //   1. The pool's `accSushiPerShare` (and `lastRewardBlock`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
         //   4. User's `rewardDebt` gets updated.
     }
-
     // Info of each pool.
     struct PoolInfo {
         IERC20 lpToken; // Address of LP token contract.
         uint256 allocPoint; // How many allocation points assigned to this pool. SUSHIs to distribute per block.
-        uint256 lastRewardTime; // Last time that SUSHIs distribution occurs.
+        uint256 lastRewardBlock; // Last block number that SUSHIs distribution occurs.
         uint256 accSushiPerShare; // Accumulated SUSHIs per share, times 1e12. See below.
     }
-
     // The SUSHI TOKEN!
     SimpleERC20 public sushi;
     // Dev address.
@@ -64,7 +64,7 @@ contract MasterChef is Ownable {
     // Block number when bonus SUSHI period ends.
     uint256 public bonusEndBlock;
     // SUSHI tokens created per block.
-    uint256 public sushiPerDay;
+    uint256 public sushiPerBlock;
     // Bonus muliplier for early sushi makers.
     uint256 public constant BONUS_MULTIPLIER = 10;
     // The migrator contract. It has a lot of power. Can only be set through governance (owner).
@@ -88,13 +88,13 @@ contract MasterChef is Ownable {
     constructor(
         SimpleERC20 _sushi,
         address _devaddr,
-        uint256 _sushiPerDay,
+        uint256 _sushiPerBlock,
         uint256 _startBlock,
         uint256 _bonusEndBlock
     ) public {
         sushi = _sushi;
         devaddr = _devaddr;
-        sushiPerDay = _sushiPerDay;
+        sushiPerBlock = _sushiPerBlock;
         bonusEndBlock = _bonusEndBlock;
         startBlock = _startBlock;
     }
@@ -117,14 +117,14 @@ contract MasterChef is Ownable {
         if (_withUpdate) {
             massUpdatePools();
         }
-        uint256 lastRewardTime =
-            block.timestamp;
+        uint256 lastRewardBlock =
+            block.number > startBlock ? block.number : startBlock;
         totalAllocPoint = totalAllocPoint.add(_allocPoint);
         poolInfo.push(
             PoolInfo({
                 lpToken: _lpToken,
                 allocPoint: _allocPoint,
-                lastRewardTime: lastRewardTime,
+                lastRewardBlock: lastRewardBlock,
                 accSushiPerShare: 0
             })
         );
@@ -162,6 +162,24 @@ contract MasterChef is Ownable {
         pool.lpToken = newLpToken;
     }
 
+    // Return reward multiplier over the given _from to _to block.
+    function getMultiplier(uint256 _from, uint256 _to)
+        public
+        view
+        returns (uint256)
+    {
+        if (_to <= bonusEndBlock) {
+            return _to.sub(_from).mul(BONUS_MULTIPLIER);
+        } else if (_from >= bonusEndBlock) {
+            return _to.sub(_from);
+        } else {
+            return
+                bonusEndBlock.sub(_from).mul(BONUS_MULTIPLIER).add(
+                    _to.sub(bonusEndBlock)
+                );
+        }
+    }
+
     // View function to see pending SUSHIs on frontend.
     function pendingReward(uint256 _pid, address _user)
         external
@@ -172,12 +190,15 @@ contract MasterChef is Ownable {
         UserInfo storage user = userInfo[_pid][_user];
         uint256 accSushiPerShare = pool.accSushiPerShare;
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
-        if (block.timestamp > pool.lastRewardTime && lpSupply != 0) {
-            uint256 time = (block.timestamp - pool.lastRewardTime).div(60).div(60).div(24);
-            uint256 rewardAmount = (time * sushiPerDay * pool.allocPoint) / totalAllocPoint;
-
+        if (block.number > pool.lastRewardBlock && lpSupply != 0) {
+            uint256 multiplier =
+                getMultiplier(pool.lastRewardBlock, block.number);
+            uint256 sushiReward =
+                multiplier.mul(sushiPerBlock).mul(pool.allocPoint).div(
+                    totalAllocPoint
+                );
             accSushiPerShare = accSushiPerShare.add(
-                rewardAmount.mul(1e12).div(lpSupply)
+                sushiReward.mul(1e12).div(lpSupply)
             );
         }
         return user.amount.mul(accSushiPerShare).div(1e12).sub(user.rewardDebt);
@@ -194,23 +215,25 @@ contract MasterChef is Ownable {
     // Update reward variables of the given pool to be up-to-date.
     function updatePool(uint256 _pid) public {
         PoolInfo storage pool = poolInfo[_pid];
-        if (block.timestamp <= pool.lastRewardTime.add(86400) ) {
+        if (block.number <= pool.lastRewardBlock) {
             return;
         }
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (lpSupply == 0) {
-            pool.lastRewardTime = block.timestamp;
+            pool.lastRewardBlock = block.number;
             return;
         }
-        uint256 time = block.timestamp.sub(pool.lastRewardTime).div(60).div(60).div(24);
-        uint256 rewardAmount = (time * sushiPerDay * pool.allocPoint) / totalAllocPoint;
-
-        sushi.mint(devaddr, rewardAmount.div(10));
-        sushi.mint(address(this), rewardAmount);
+        uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
+        uint256 sushiReward =
+            multiplier.mul(sushiPerBlock).mul(pool.allocPoint).div(
+                totalAllocPoint
+            );
+        sushi.mint(devaddr, sushiReward.div(10));
+        sushi.mint(address(this), sushiReward);
         pool.accSushiPerShare = pool.accSushiPerShare.add(
-            rewardAmount.mul(1e12).div(lpSupply)
+            sushiReward.mul(1e12).div(lpSupply)
         );
-        pool.lastRewardTime = block.timestamp;
+        pool.lastRewardBlock = block.number;
     }
 
     // Deposit LP tokens to MasterChef for SUSHI allocation.

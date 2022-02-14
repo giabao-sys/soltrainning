@@ -471,10 +471,10 @@
 			]
 		},
 		"contracts/ERC20/BaoPG/ERC20.sol": {
-			"keccak256": "0x2453c4e5648d3a038a3905034c3700aaa6779cdb0e6f64214a56abf1ab7f6b36",
+			"keccak256": "0x3a4f597d6074c247fe26acbac66b5dfe1f763b676fe02e0ffcf22e801b0e046c",
 			"urls": [
-				"bzz-raw://848a8f0b0ccc3e476a57fda7847a66ae19e36380f4381dc378f8e4d5f1eddcc0",
-				"dweb:/ipfs/Qmecyd7sMPgxQXZ9gw5XZmWAFB6w3g795a4EswUJkEPnuy"
+				"bzz-raw://a2c7d5ac97477efd14d3a46b6ff65742fcb5be329436c7a32d3d152c68a6afd1",
+				"dweb:/ipfs/QmYcx4afUwDMFdoMqYH9BkBkEtQGPKYXbKmxsnR6jVjwDe"
 			]
 		}
 	},

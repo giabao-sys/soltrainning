@@ -32,6 +32,7 @@ interface IVault {
     function rescueFund(address _token, uint256 _amount) external;
 
     function canAbandon() external returns (bool);
+    
     function addRoute(
         address _from,
         address _to,

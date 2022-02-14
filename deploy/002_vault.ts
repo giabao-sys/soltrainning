@@ -1,3 +1,4 @@
+import { parseUnits } from 'ethers/lib/utils';
 import {network} from 'hardhat';
 import {DeployFunction} from 'hardhat-deploy/types';
 
@@ -8,15 +9,12 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   console.log('> Deploy farms');
   console.log('> Network name:' + network.name);
 
-  const simpleERC20 = {address: '0x8a4Db16D0e861C5bfD2c163a28Ef36a17ba5b5A3'};
-  const weth = {address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619'};
+  const simpleERC20 = {address: '0x5aEA4eA47c37bd70a8A39EE24ff4c03c64B05D05'};
+  const weth = {address: '0xd0a1e359811322d97991e03f863a0c30c2cf029c'};
   const sushiSwapRouter = {address: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'};
 
   const masterChef = await get('MasterChef');
-  console.log('SimpleERC20:' + masterChef.address);
   console.log('masterchef:' + masterChef.address);
-  console.log('VaultLP:' + masterChef.address);
-  // const router = await deploy('Router', {from: deployer, log: true});
 
   const vault = await deploy('VaultLP', {
     from: deployer,
@@ -28,11 +26,10 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
     'VaultLP',
     {from: deployer, log: true},
     'initialize',
-    '0x46bEC8B77d117fDC69b0681c3697a81B43585C8b'
+    deployer
   );
 
-    // route: simpleERC20 -> weth
-  await execute(
+    await execute(
     'VaultLP',
     {from: deployer, log: true},
     'addRoute',
@@ -42,8 +39,7 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
     [simpleERC20.address, weth.address]
   );
 
-  // route: weth -> simpleERC20
-  await execute(
+    await execute(
     'VaultLP',
     {from: deployer, log: true},
     'addRoute',

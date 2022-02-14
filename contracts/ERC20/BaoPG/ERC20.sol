@@ -12,7 +12,7 @@ contract SimpleERC20 is IERC20, Ownable {
 
     uint256 public constant decimals = 12;
     uint256 public override totalSupply;
-    uint256 public constant MAX_TOTAL_SUPPLY = 1000 * 10 ** uint256(decimals);
+    uint256 public constant MAX_TOTAL_SUPPLY = 10000000000000000 * 10 ** uint256(decimals);
     address public minter;
 
     mapping(address => uint256) public override balanceOf;

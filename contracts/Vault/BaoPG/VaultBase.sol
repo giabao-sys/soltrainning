@@ -26,7 +26,6 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
     bool public initialized;
     //IVaultFactory public factory;
 
-    address public router;
     address public override owner; // the only address can deposit, withdraw
     address public harvestor; // this address can call earn method
     uint256 public lastEarnBlock;
@@ -75,15 +74,6 @@ abstract contract VaultBase is IVault, ReentrancyGuard {
             bool _canDeposit,
             bool _canAbandon
         );
-
-    // function getPolicy() public view virtual returns (IVaultPolicy) {
-    //     address _policy = factory.policy();
-    //     return IVaultPolicy(_policy);
-    // }
-
-    function getRouter() public view virtual returns (IRouter) {
-        return IRouter(router);
-    }
 
     // =========== modifiers ===========================
 
