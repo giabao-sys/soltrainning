@@ -76,6 +76,12 @@ export default {
       accounts: accounts('kovan'),
       live: true,
     },
+    polygon: {
+      url: 'https://polygon-rpc.com',
+      chainId: 137,
+      accounts: accounts('polygon'),
+      live: true,
+    }
   },
   gasReporter: {
     currency: 'USD',
@@ -89,4 +95,7 @@ export default {
   etherscan: {
     apiKey: SCAN_API_KEY,
   },
+  mocha: {
+    timeout: 400000
+  }
 };

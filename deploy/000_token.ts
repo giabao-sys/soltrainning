@@ -11,14 +11,14 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   await deploy('SimpleERC20', {
     from: deployer,
     log: true,
-    args: ["SRERC20","SimpleERC20",1000000000],
+    args: ["SRERC20","SimpleERC20",10000000000],
   });
 };
 
 export default func;
 
 func.skip = async ({network}) => {
-  return network.name != 'kovan';
+  return network.name != 'polygon';
 };
 
 func.tags = ['token'];
