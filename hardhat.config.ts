@@ -85,7 +85,7 @@ export default {
   },
   gasReporter: {
     currency: 'USD',
-    gasPrice: 5,
+    gasPrice: "auto",
     enabled: !!process.env.REPORT_GAS,
   },
   namedAccounts: {

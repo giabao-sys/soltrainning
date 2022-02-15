@@ -13,7 +13,7 @@ const func: DeployFunction = async ({deployments, getNamedAccounts}) => {
   const masterChef = await deploy('MasterChef', {
     from: deployer,
     log: true,
-    args: [simpleERC20.address,deployer,1,0,100000000000000],
+    args: [simpleERC20.address,deployer,1*10**12,0,100000000000000],
   });
   //await execute('MasterChef', {from: deployer, log: true}, 'deposit',0, 1000000);
 
